@@ -1,4 +1,4 @@
-package DesignPatterns.Strategy;
+package designpattern.strategy;
 
 public class ConcreteStrategyA implements Strategy {
 	public void execute() {
