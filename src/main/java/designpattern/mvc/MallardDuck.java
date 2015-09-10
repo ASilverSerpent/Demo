@@ -1,0 +1,7 @@
+package designpattern.mvc;
+
+public class MallardDuck implements Quackable {
+	public void quack() {
+		System.out.println("Quack");
+	}
+}

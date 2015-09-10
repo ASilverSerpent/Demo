@@ -9,11 +9,14 @@ public class AnnotationTest {
 	public static void parseAnnotation() {
 		try {
 			Class<?> clazz = Class.forName("AnnotationTest");
+			
+			//获取类上的注解
 			boolean isExist = clazz.isAnnotationPresent(Override.class);
 			if (isExist) {
 				Override o = (Override) clazz.getAnnotation(Override.class);
 			}
-
+			
+			//获取方法注解
 			Method[] methods = clazz.getMethods();
 			for (Method m : methods) {
 				boolean isExist1 = m.isAnnotationPresent(Override.class);
