@@ -1,4 +1,4 @@
-package designpattern;
+package designpattern.singleton;
 
 public class Singleton {
 	private volatile static Singleton uniqueInstance;

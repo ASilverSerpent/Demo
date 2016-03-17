@@ -11,7 +11,6 @@
 	<properties>
 		<!-- 工程构建使用字符集 -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		
 		<jsp.version>2.2</jsp.version>
 		<jstl.version>1.2</jstl.version>
 		<servlet.version>2.5</servlet.version>
@@ -19,6 +18,7 @@
 		<hibernate.version>4.2.1.Final</hibernate.version>
 		<spring-framework.version>3.2.3.RELEASE</spring-framework.version>
 		<mysql.version>5.1.24</mysql.version>
+		<dubbo.version>2.5.3</dubbo.version>
 		<junit.version>4.11</junit.version>
 		<groovy.version>2.4.4</groovy.version>
 	</properties>
@@ -52,14 +52,18 @@
 			<groupId>org.apache.struts</groupId>
 			<artifactId>struts2-core</artifactId>
 			<version>${struts2.version}</version>
-			<!--这里的 exclusions 是排除包，因为 Struts2中有javassist，Hibernate中也有javassist,
-			 所以如果要整合Hibernate，一定要排除掉Struts2中的javassist，否则就冲突了。 -->
 			<exclusions>
 				<exclusion>
 					<groupId>javassist</groupId>
 					<artifactId>javassist</artifactId>
 				</exclusion>
 			</exclusions> 
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring-framework.version}</version>
 		</dependency>
 		
 		<dependency>
@@ -86,6 +90,12 @@
 			<scope>test</scope>
 		</dependency> 
 		
+		<dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>dubbo</artifactId>
+            <version>${dubbo.version}</version>
+        </dependency>
+		
 		<!-- groovy 
 		<dependency>
 			<groupId>org.codehaus.groovy</groupId>
@@ -103,6 +113,10 @@
 			<version>${groovy.version}</version>
 		</dependency>
 		-->
-		
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-core</artifactId>
+			<version>3.1.2</version>
+		</dependency>
 	</dependencies>
 </project>

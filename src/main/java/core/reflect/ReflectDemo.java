@@ -23,7 +23,7 @@ public class ReflectDemo {
 			str += ")";
 			System.out.println(str);
 		}
-		
+		System.out.println("the fields:");
 		Field[] fields = clazz.getDeclaredFields();
 		for (Field field : fields) {
 			Class<?> fieldType = field.getType();
@@ -34,6 +34,6 @@ public class ReflectDemo {
 	}
 	
 	public static void main(String[] args) {
-		classMessage("str");
+		classMessage(String.class);
 	}
 }

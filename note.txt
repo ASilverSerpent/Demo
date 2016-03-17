@@ -1,0 +1,21 @@
+--src/main/java
+	--core
+		--annotation 注解
+		
+		--io
+		
+		--reflect 反射
+		
+		--security
+			--EncryptDemo.java 加解密
+		
+		--thread 多线程
+	
+	--webservice
+	
+		wsimport -d d:/webservice/src/ -keep -verbose http://localhost:8888/ws?wsdl
+
+	DataStructure
+	数据结构
+
+
